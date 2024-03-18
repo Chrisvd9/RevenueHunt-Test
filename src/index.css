@@ -1,0 +1,101 @@
+.container,
+.maincontainer {
+  place-content: center;
+  height: 100vh;
+}
+.btn-css,
+.btn-polaris {
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: Roboto, "Segoe UI", sans-serif;
+  text-transform: uppercase;
+}
+.maincontainer {
+  display: grid;
+  place-items: center;
+}
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.flexbtn {
+  display: flex;
+  gap: 40px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+  gap: 32px;
+}
+.component {
+  margin: 16px;
+}
+.btn-polaris {
+  --color: #00a97f;
+  --color2: rgb(10, 25, 30);
+  border-radius: 6px;
+  border: 0.3px solid var(--color);
+  color: var(--color);
+}
+.btn-css::after,
+.btn-css::before,
+.btn-polaris::after,
+.btn-polaris::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+.btn-css::before,
+.btn-polaris::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+.btn-css:hover::before,
+.btn-polaris:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+.btn-css:hover::after,
+.btn-polaris:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+.btn-css:hover,
+.btn-polaris:hover {
+  color: var(--color2);
+}
+.btn-css:active,
+.btn-polaris:active {
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}
+.btn-css {
+  --color: #009ba9;
+  --color2: rgb(10, 25, 30);
+  border-radius: 6px;
+  border: 0.3px solid var(--color);
+  color: var(--color);
+}
+
+.back {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
