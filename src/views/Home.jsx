@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="homeContainer">
-      <h2>Welcome to RevenueHunt Test</h2>
+      <h1>Welcome to RevenueHunt Test</h1>
       <div className="flexbtn">
         <Link to="/withcssgrid">
           <button className="btn-css">View with css grid layout</button>
